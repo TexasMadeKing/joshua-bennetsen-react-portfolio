@@ -4,7 +4,6 @@
   "description": "Personal portfolio app built in",
   "scripts": {
     "preinstall": "npm set audit false",
-    "postinstall": "copy env.example.js env.js",
     "start": "webpack-dev-server --config webpack/dev.config.js --watch",
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
     "heroku-postbuild": "npm run build",
