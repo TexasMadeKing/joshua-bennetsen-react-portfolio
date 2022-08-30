@@ -1,56 +1,6 @@
-// import React, { Component } from "react";
-
-// import PortfolioItem from "./portfolio-items";
-
-// export default class PortfolioContainer extends Component {
-//   constructor() {
-//     super();
-
-//     this.state = {
-//       pageTitle: "Welcome to my portfolio",
-//       data: [
-//         { title: "Quip" },
-//         { title: "Eventbrite" },
-//         { title: "Ministry Safe" },
-//         { title: "SwingAway" }
-//       ]
-//     };
-
-//     this.handlePageTitleUpdate = this.handlePageTitleUpdate.bind(this);
-//   }
-
-//   portfolioItems() {
-//     return this.state.data.map(item => {
-//       return <PortfolioItem title={item.title} url={"https://www.google.com/"} />;
-//     });
-//   }
-
-//   handlePageTitleUpdate() {
-//     this.setState({
-//       pageTitle: "UPDATE"
-//     });
-
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <h2>{this.state.pageTitle}</h2>
-
-//         {this.portfolioItems()}
-
-//         <hr />
-
-//         <button onClick={(this.handlePageTitleUpdate)}>Change Title</button>
-
-//       </div>
-//     );
-//   }
-// }
-
 import React, { Component } from "react";
 
-import PortfolioItem from "./portfolio-items";
+import PortfolioItem from "./portfolio-item";
 
 export default class PortfolioContainer extends Component {
   constructor() {
@@ -60,10 +10,14 @@ export default class PortfolioContainer extends Component {
       pageTitle: "Welcome to my portfolio",
       isLoading: false,
       data: [
-        { title: "Quip", category: "eCommerce" },
-        { title: "Eventbrite", category: "Scheduling" },
-        { title: "Ministry Safe", category: "Enterprise" },
-        { title: "SwingAway", category: "eCommerce" }
+        { title: "Quip", category: "eCommerce", slug: "quip" },
+        { title: "Eventbrite", category: "Scheduling", slug: "eventbrite" },
+        {
+          title: "Ministry Safe",
+          category: "Enterprise",
+          slug: "ministry-safe"
+        },
+        { title: "SwingAway", category: "eCommerce", slug: "swingaway" }
       ]
     };
 
@@ -80,7 +34,9 @@ export default class PortfolioContainer extends Component {
 
   portfolioItems() {
     return this.state.data.map(item => {
-      return <PortfolioItem title={item.title} url={"google.com"} />;
+      return (
+        <PortfolioItem title={item.title} url={"google.com"} slug={item.slug} />
+      );
     });
   }
 
