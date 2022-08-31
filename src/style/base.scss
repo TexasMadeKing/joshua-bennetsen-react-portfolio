@@ -1,3 +1,9 @@
 body {
     margin: 0px;
+    font-family: 'Aboreto', cursive;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
 }
