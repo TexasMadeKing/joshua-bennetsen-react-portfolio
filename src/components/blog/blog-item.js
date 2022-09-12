@@ -16,9 +16,9 @@ const BlogItem = props => {
         <h1>{title}</h1>
       </Link>
       <div>{content}</div>
-      <div className="featured-image-wrapper">
-        <img src={featured_image_url} />
-        </div>
+      {/* <div className="featured-image-wrapper"> */}
+        {/* <img src={featured_image_url} /> */}
+        {/* </div> */}
     </div>
   );
 };
