@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import ReactHtmlParser from "react-html-parser";
+
+import BlogFeaturedImage from "../blog/blog-featured-image";
 
 export default class BlogDetail extends Component {
   constructor(props) {
@@ -14,11 +17,11 @@ export default class BlogDetail extends Component {
   getBlogItem() {
     axios
       .get(
-        `https://joshbennetsen.devcamp.space/portfolio/portfolio_blogs/${this.state
-          .currentId}`
+        `https://joshbennetsen.devcamp.space/portfolio/portfolio_blogs/${
+          this.state.currentId
+        }`
       )
       .then(response => {
-        // console.log("response", response);
         this.setState({
           blogItem: response.data.portfolio_blog
         });
@@ -33,27 +36,21 @@ export default class BlogDetail extends Component {
   }
 
   render() {
-      const {
-          title,
-          content,
-          featured_image_url,
-          blog_status
-        } = this.state.blogItem;
-        
+    const {
+      title,
+      content,
+      featured_image_url,
+      blog_status
+    } = this.state.blogItem;
+
     return (
       <div className="blog-container">
         <div className="content-container">
           <h1>{title}</h1>
 
-          <div>
-          <div className="blog_status">{blog_status}</div>
-          </div>
+          <BlogFeaturedImage img={featured_image_url} />
 
-          <div className="featured-image-wrapper">
-            <img src={featured_image_url} />
-          </div>
-
-          <div className="content">{content}</div>
+          <div className="content">{ReactHtmlParser(content)}</div>
         </div>
       </div>
     );

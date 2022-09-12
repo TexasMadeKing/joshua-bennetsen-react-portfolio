@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import striptags from "striptags";
+import Truncate from "react-truncate";
 
 const BlogItem = props => {
   const {
@@ -15,10 +17,18 @@ const BlogItem = props => {
       <Link to={`/b/${id}`}>
         <h1>{title}</h1>
       </Link>
-      <div>{content}</div>
-      {/* <div className="featured-image-wrapper"> */}
-        {/* <img src={featured_image_url} /> */}
-        {/* </div> */}
+      <div>
+        <Truncate
+          lines={5}
+          ellipsis={
+            <span>
+              ...<Link to={`/b/${id}`}>Read more</Link>
+            </span>
+          }
+        >
+          {striptags(content)}
+        </Truncate>
+      </div>
     </div>
   );
 };
@@ -27,6 +37,8 @@ export default BlogItem;
 
 // import React from "react";
 // import { Link } from "react-router-dom";
+// import striptags from "striptags";
+// import Truncate from "react-truncate";
 
 // const BlogItem = props => {
 //   const {
@@ -38,15 +50,24 @@ export default BlogItem;
 //   } = props.blogItem;
 
 //   return (
-//     <div className="blog-container">
-//       <div className="content-container">
+//     <div>
+//       <Link to={`/b/${id}`}>
 //         <h1>{title}</h1>
-
-//         <div className="featured-image-wrapper">
-//           <img src={featured_image_url} />
+//       </Link>
+//       <div className="featured-image-wrapper">
+//         <img src={featured_image_url} />
 //         </div>
-
-//         <div className="content">{content}</div>
+//       <div>
+//         <Truncate
+//           lines={5}
+//           ellipsis={
+//             <span>
+//               ...<Link to={`/b/${id}`}>Read more</Link>
+//             </span>
+//           }
+//         >
+//           {striptags(content)}
+//         </Truncate>
 //       </div>
 //     </div>
 //   );
