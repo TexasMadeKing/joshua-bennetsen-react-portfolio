@@ -53,10 +53,11 @@ export default BlogItem;
 //     <div>
 //       <Link to={`/b/${id}`}>
 //         <h1>{title}</h1>
+//         <h1>{blog_status}</h1>
 //       </Link>
 //       <div className="featured-image-wrapper">
-//         <img src={featured_image_url} />
-//         </div>
+//          <img src={featured_image_url} />
+//          </div>
 //       <div>
 //         <Truncate
 //           lines={5}

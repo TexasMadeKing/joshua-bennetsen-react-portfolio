@@ -88,11 +88,11 @@ class Blog extends Component {
       });
   }
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     this.getBlogItems();
   }
 
-  UNSAFE_componentWillUnmount() {
+  componentWillUnmount() {
     window.removeEventListener("scroll", this.onScroll, false);
   }
 

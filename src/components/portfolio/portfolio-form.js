@@ -54,7 +54,7 @@ export default class PortfolioForm extends Component {
       });
   }
 
-  componentDidUpdate() {
+  UNSAFE_componentDidUpdate() {
     if (Object.keys(this.props.portfolioToEdit).length > 0) {
       const {
         id,
