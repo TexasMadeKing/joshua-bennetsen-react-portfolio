@@ -7,7 +7,8 @@ import {
     faPhone,
     faEnvelope,
     faMapMarkedAlt,
-    faLock
+    faLock,
+    faTrashCan
   } from "@fortawesome/free-solid-svg-icons";
   import { library } from "@fortawesome/fontawesome-svg-core";
   
@@ -21,7 +22,8 @@ import {
       faPhone,
       faEnvelope,
       faMapMarkedAlt,
-      faLock
+      faLock,
+      faTrashCan
     );
   };
   

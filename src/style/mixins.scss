@@ -1,27 +1,28 @@
 @mixin base-btn {
     cursor: pointer;
     height: 42px;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 500;
     border: 1px solid transparent;
     transition: all 0.5s ease-in-out;
-    background-color: $teal;
-    color: white;
+    // background-color: $teal;
+    background: linear-gradient(#05cbf3, #45f80485);
+    color: black;
   
     &:active,
     &:focus {
-      outline: none;
+      outline: blueviolet;
     }
   
     &:hover {
-      background-color: $dark-teal;
+      background-color: black;
     }
   }
   
   @mixin input-element {
     input {
       font-family: "Titillium Web", sans-serif;
-      color: $charcoal;
+      color: black;
       padding: 5px 0px;
       width: 100%;
       border-top: 0px;
@@ -35,7 +36,7 @@
   
       &:focus {
         outline: none;
-        border-bottom: 1px solid $dark-teal;
+        border-bottom: 1px solid black;
       }
     }
   }

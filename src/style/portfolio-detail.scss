@@ -6,7 +6,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 15px 20px rgba(7, 190, 246, 0.3);
     }
   
     .portfolio-detail-description-wrapper {
@@ -16,6 +16,7 @@
       justify-content: center;
   
       .description {
+        // box-shadow: 0px 2px 25px rgba(7, 190, 246, 1);
         width: 700px;
         font-size: 2em;
         margin-bottom: 50px;
@@ -29,11 +30,13 @@
       align-items: center;
   
       .site-link {
+        box-shadow: 0px 15px 20px rgba(7, 190, 246, 0.3);
         padding: 15px;
-        background-color: $teal;
+        background: linear-gradient(#e66465, #9198e5);
+        // background-color: gray;
         border-radius: 3px;
         text-decoration: none;
-        color: white;
+        color: $teal;
         transition: 0.5s ease-in-out;
         font-size: 1.2em;
   
