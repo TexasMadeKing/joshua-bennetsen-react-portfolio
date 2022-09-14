@@ -8,6 +8,7 @@
     }
   
     .right-column {
+      background: linear-gradient(#05cbf3, #45f80485);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,7 +25,7 @@
   
           svg {
             font-size: 2em;
-            color: $teal;
+            color: blueviolet;
             margin-right: 15px;
           }
         }

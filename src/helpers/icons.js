@@ -8,7 +8,8 @@ import {
     faEnvelope,
     faMapMarkedAlt,
     faLock,
-    faTrashCan
+    faTrashCan,
+    faDumpsterFire
   } from "@fortawesome/free-solid-svg-icons";
   import { library } from "@fortawesome/fontawesome-svg-core";
   
@@ -23,7 +24,8 @@ import {
       faEnvelope,
       faMapMarkedAlt,
       faLock,
-      faTrashCan
+      faTrashCan,
+      faDumpsterFire
     );
   };
   
